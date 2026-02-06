@@ -89,7 +89,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       child: const Text(
                         'SE CONNECTER',
-                        style: TextStyle(letterSpacing: 0.6),
+                        style: TextStyle(
+                          letterSpacing: 0.6,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                   ),
@@ -312,7 +316,7 @@ class _SocialButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final showLabel = constraints.maxWidth >= 170;
+        final showLabel = constraints.maxWidth >= 200;
         return Container(
           height: 48,
           padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -338,7 +342,7 @@ class _SocialButton extends StatelessWidget {
                     label,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      fontSize: 12,
+                      fontSize: 11,
                       fontWeight: FontWeight.w700,
                       color: Color(0xFF2E2E2E),
                     ),
